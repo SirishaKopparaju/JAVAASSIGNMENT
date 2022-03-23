@@ -1,22 +1,18 @@
 package Day4;
 
-import java.util.Scanner;
-
 public class BasicCoreJava {
 	public static void main(String[]args) {
-		Scanner sc=new Scanner(System.in);
-		int n,p,res=1;
-		double sum=0.0;
-		System.out.println("enter n value");
-		n=sc.nextInt();
-		System.out.println("enter p value");
 
-		p=sc.nextInt();
+	double FLIP=Math.floor(Math.random()*10)%2;
+	if(FLIP==1) {
+		System.out.println("coin is heads");
+	}
+	else {
+		System.out.println("coin is tails");
 
-		for (int i=1;i<=p;i++) {
-			res=n*res;
-		}
-		System.out.println("power is"+res);
+		
 	}
 }
+}
+
 
