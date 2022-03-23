@@ -1,13 +1,19 @@
 package Day4;
 
+import java.util.Scanner;
+
 public class BasicCoreJava {
 	public static void main(String[]args) {
-		int a=10,b=20;
-		System.out.println("Before Swaping:"+a +b);
-		int t=a;
-		a=b;
-		b=t;
-	
-	System.out.println("after Swaping:"+a +b);
-	}
-}
+		Scanner sc =new Scanner(System.in);
+		System.out.println("enter the number");
+
+		int num=sc.nextInt();
+		if(num%2==0) {
+			System.out.println("its even number");
+		}
+			else {
+				System.out.println("its odd number");
+			}
+			}
+		}
+
