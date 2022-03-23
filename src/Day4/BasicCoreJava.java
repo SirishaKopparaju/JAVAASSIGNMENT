@@ -1,16 +1,21 @@
 package Day4;
 
+import java.util.Scanner;
 
 public class BasicCoreJava {
 	public static void main(String[]args) {
-		int num=10;
-		long factorial=1;
-		for(int i=1;i<num;i++)
+		Scanner sc=new Scanner(System.in);
+		int n;
+		double sum=0.0;
+		System.out.println("enter n value");
+		n=sc.nextInt();
+		while(n>0)
 		{
-			factorial=factorial*i;
+			sum+=(1.0)/n;
+			n--;
 			
 		}
-		System.out.println("factorial of number is" +factorial);
-		}
+		System.out.println("harmonic sum is"+sum);
+	}
 }
 
