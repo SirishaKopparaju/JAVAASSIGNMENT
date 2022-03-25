@@ -1,24 +1,23 @@
 package Day6;
 
+import java.time.LocalDateTime;
+
 public class LogicalPrograms {
 	public static void main(String[] args) 
 	{
-		char[] chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789".toCharArray();
-		int max=100000000;
-		int random=(int) (Math.random()*max);	
-		StringBuffer sb=new StringBuffer();
+		LocalDateTime localdatetime	=LocalDateTime.now();
+		char ch = 0;
 		
-		while (random>0)
-		{
-			sb.append(chars[random % chars.length]);
-			random /= chars.length;
-		}
-
-		String couponCode=sb.toString();
-		System.out.println("Coupon Code: "+couponCode);	
+System.out.println(localdatetime);
+	
+	switch(ch)
+	{
+	case '0': 
+		System.out.println("start the stop watch");
+		break;
+	case '1':
+		System.out.println("stop the stop watch");
+		break;
 	}
-
-} 
-
-
-
+	}
+}
