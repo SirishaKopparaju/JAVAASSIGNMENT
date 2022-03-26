@@ -1,43 +1,45 @@
 package Day4;
 
-import java.util.Scanner;
-
 public class BasicCoreJava {
-	public static void main(String[]args) {
-	 
-	                Scanner scan = new Scanner(System.in);
-	 
-	                int inputArr[][] = new int[5][5];
-	 
-	                System.out.println("Enter the number of rows : ");
-	                int noOfRows = scan.nextInt();
-	                System.out.println("Enter the number of columns : ");
-	                int noOfCols = scan.nextInt();
-	 
-	                int noOfElements = noOfRows * noOfCols;
-	 
-	                System.out.println("Please enter " + noOfElements + " elements nows.");
-	 
-	                // read array elements row wise.
-	                for (int i = 0; i < noOfRows; i++) {
-	                        for (int j = 0; j < noOfRows; j++) {
-	                                inputArr[i][j] = scan.nextInt();
-	                        }
-	                }
-	 
-	                // close the scanner
-	                scan.close();
-	                System.out.println("The Input array is :");
-	                for (int i = 0; i < noOfRows; i++) {
-	                        for (int j = 0; j < noOfRows; j++) {
-	                                System.out.print(inputArr[i][j] + "\t");
-	                        }
-	                        System.out.println();
-	                }
-	        }
-	}
+		static void Triplets(int[] arr, int n)
+		{
+		    boolean found = false;
+		    for (int i=0; i<n-2; i++)
+		    {
+		        for (int j=i+1; j<n-1; j++)
+		        {
+		            for (int k=j+1; k<n; k++)
+		            {
+		                if (arr[i]+arr[j]+arr[k] == 0)
+		                {
+		                    System.out.print(arr[i]);
+		                    System.out.print(" ");
+		                    System.out.print(arr[j]);
+		                    System.out.print(" ");
+		                    System.out.print(arr[k]);
+		                    System.out.print("\n");
+		                    found = true;
+		                }
+		            }
+		        }
+		    }
 		
-	
+		    if (found == false) 
+		        System.out.println(" not exist ");
+		}
+		    
+		
+		public static void main(String[] args)
+		{
+		    int arr[] = {0, -1, 2, -3, 1};
+		    int n =arr.length;
+		    Triplets(arr, n);
+		}
+		
+		
+
+}
+		 
 
 
 
