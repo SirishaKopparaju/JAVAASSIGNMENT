@@ -1,41 +1,25 @@
 package Day4;
 
 public class BasicCoreJava {
-		static void Triplets(int[] arr, int n)
-		{
-		    boolean found = false;
-		    for (int i=0; i<n-2; i++)
-		    {
-		        for (int j=i+1; j<n-1; j++)
-		        {
-		            for (int k=j+1; k<n; k++)
-		            {
-		                if (arr[i]+arr[j]+arr[k] == 0)
-		                {
-		                    System.out.print(arr[i]);
-		                    System.out.print(" ");
-		                    System.out.print(arr[j]);
-		                    System.out.print(" ");
-		                    System.out.print(arr[k]);
-		                    System.out.print("\n");
-		                    found = true;
-		                }
-		            }
-		        }
-		    }
+public static void main(String args[])
+	
+	{     	long x1,x2,y1,y2;
+ 
+		double dis;
+ 
+                x1=Long.parseLong(args[0]);
 		
-		    if (found == false) 
-		        System.out.println(" not exist ");
-		}
-		    
+                y1=Long.parseLong(args[1]);
+ 
+	        x2=Long.parseLong(args[2]);
 		
-		public static void main(String[] args)
-		{
-		    int arr[] = {0, -1, 2, -3, 1};
-		    int n =arr.length;
-		    Triplets(arr, n);
-		}
-		
+                y2=Long.parseLong(args[3]); 
+		     
+	        dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+ 	 	        
+  	        System.out.println("distancebetween"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
+ 
+	}
 		
 
 }
