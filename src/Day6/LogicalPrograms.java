@@ -1,29 +1,21 @@
 package Day6;
 
-import java.time.LocalDateTime;
+
 
 
 public class LogicalPrograms {
 	
-		public static void main(String[] args) 
-		{
-			LocalDateTime localdatetime	=LocalDateTime.now();
-			char ch=0;
-			
-			
-	System.out.println(localdatetime);
-		
-		switch(ch)
-		{
-		case '0': 
-			System.out.println("start the stop watch");
-			break;
-		case '1':
-			System.out.println("stop the stop watch");
-			break;
-		}
-		
-	}
+	public static void main(String[] args)   
+	{  
+	int number = 987654, reverse = 0;  
+	while(number != 0)   
+	{  
+	int remainder = number % 10;  
+	reverse = reverse * 10 + remainder;  
+	number = number/10;  
+	}  
+	System.out.println("The reverse of the given number is: " + reverse);  
+	}  
 	}
 
 
