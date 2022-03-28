@@ -1,15 +1,26 @@
 package Day6;
+
+import java.util.Scanner;
+
 public class LogicalPrograms {
-	static int swapNibbles(int x)
-	{
-	    return ((x & 0x0F) << 4 | (x & 0xF0) >> 4);
-	}
-	 
-	// Driver code
-	public static void main(String arg[])
-	{
-	    int x = 100;
-	    System.out.print(swapNibbles(x));
+	public static void main(String[] args) {
+		try {
+			Scanner s = new Scanner(System.in);
+			System.out.println("enter temp in c or f");
+			int tem = s.nextInt();
+			char t = s.next().charAt(0);
+			s.close();
+			if (t != 'f' && t != 'F' && t != 'c' && t != 'C') {
+				System.out.println("enter correct input");
+				main(args);
+				return;
+			}
+			tem = Util.temperaturConversion(tem, t);
+			System.out.println("coverted temp is " + tem);
+		} catch (Exception e) {
+			System.out.println("temperature in format 4545 c");
+		}
+
 	}
 }
 
